@@ -4,7 +4,7 @@ filetype off                  " required
 " VimPlug
 call plug#begin('~/.config/nvim/plugged')
 " Snippets - Autocomplete
-Plug 'Shougo/deoplete.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'sniphpets/sniphpets'
 Plug 'sniphpets/sniphpets-common'
@@ -34,7 +34,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/unite.vim'       " Fuzzy file complettion
 Plug 'Shougo/neomru.vim'      " Source recent files
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tsukkee/unite-tag'      " Source tags source
 Plug 'Shougo/echodoc.vim'     " Extra information display in echo area
 Plug 'unblevable/quick-scope' " Fast jump Left Right marks
@@ -399,7 +398,7 @@ set completeopt=longest,menuone "like an editor
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-"let g:deoplete#ignore_sources.php = ['omni']
+let g:deoplete#ignore_sources.php = ['omni']
 
 " Define dictionary.
 let g:deoplete#sources#dictionary#dictionaries = {
